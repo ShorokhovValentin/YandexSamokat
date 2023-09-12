@@ -10,8 +10,7 @@ COUNT(ord."courierId") AS "Заказы в доставке"
 FROM "Couriers" AS cr 
 INNER JOIN "Orders" AS ord ON cr.id = ord."courierId" 
 WHERE "inDelivery" = true 
-GROUP BY ord."courierId", cr.login;
-
+GROUP BY cr.login;
 
 
 
